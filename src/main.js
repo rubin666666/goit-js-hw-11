@@ -14,7 +14,7 @@ const searchInput = form.querySelector('input[name="search-text"]');
 
 form.addEventListener('submit', handleFormSubmit);
 
-async function handleFormSubmit(event) {
+function handleFormSubmit(event) {
   event.preventDefault();
 
   const query = searchInput.value.trim();
@@ -31,31 +31,31 @@ async function handleFormSubmit(event) {
   clearGallery();
   showLoader();
 
-  try {
-    const data = await getImagesByQuery(query);
+  getImagesByQuery(query)
+    .then(data => {
+      hideLoader();
 
-    hideLoader();
+      if (data.hits.length === 0) {
+        iziToast.info({
+          title: 'No results',
+          message:
+            'Sorry, there are no images matching your search query. Please try again!',
+          position: 'topRight',
+        });
+        return;
+      }
 
-    if (data.hits.length === 0) {
-      iziToast.info({
-        title: 'No results',
-        message:
-          'Sorry, there are no images matching your search query. Please try again!',
+      createGallery(data.hits);
+      searchInput.value = '';
+    })
+    .catch(error => {
+      hideLoader();
+      iziToast.error({
+        title: 'Error',
+        message: 'Failed to fetch images. Please try again later.',
         position: 'topRight',
       });
-      return;
-    }
-
-    createGallery(data.hits);
-    searchInput.value = '';
-  } catch (error) {
-    hideLoader();
-    iziToast.error({
-      title: 'Error',
-      message: 'Failed to fetch images. Please try again later.',
-      position: 'topRight',
+      console.error('Error:', error);
     });
-    console.error('Error:', error);
-  }
 }
 
