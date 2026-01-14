@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Search</title>
+    <link rel="stylesheet" href="data:text/javascript;base64,aW1wb3J0ICcuL2Nzcy9zdHlsZXMuY3NzJzsNCmltcG9ydCBpemlUb2FzdCBmcm9tICdpeml0b2FzdCc7DQppbXBvcnQgJ2l6aXRvYXN0L2Rpc3QvY3NzL2l6aVRvYXN0Lm1pbi5jc3MnOw0KaW1wb3J0IHsgZ2V0SW1hZ2VzQnlRdWVyeSB9IGZyb20gJy4vanMvcGl4YWJheS1hcGkuanMnOw0KaW1wb3J0IHsNCiAgY3JlYXRlR2FsbGVyeSwNCiAgY2xlYXJHYWxsZXJ5LA0KICBzaG93TG9hZGVyLA0KICBoaWRlTG9hZGVyLA0KfSBmcm9tICcuL2pzL3JlbmRlci1mdW5jdGlvbnMuanMnOw0KDQpjb25zdCBmb3JtID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignLmZvcm0nKTsNCmNvbnN0IHNlYXJjaElucHV0ID0gZm9ybS5xdWVyeVNlbGVjdG9yKCdpbnB1dFtuYW1lPSJzZWFyY2gtdGV4dCJdJyk7DQoNCmZvcm0uYWRkRXZlbnRMaXN0ZW5lcignc3VibWl0JywgaGFuZGxlRm9ybVN1Ym1pdCk7DQoNCmFzeW5jIGZ1bmN0aW9uIGhhbmRsZUZvcm1TdWJtaXQoZXZlbnQpIHsNCiAgZXZlbnQucHJldmVudERlZmF1bHQoKTsNCg0KICBjb25zdCBxdWVyeSA9IHNlYXJjaElucHV0LnZhbHVlLnRyaW0oKTsNCg0KICBpZiAoIXF1ZXJ5KSB7DQogICAgaXppVG9hc3QuZXJyb3Ioew0KICAgICAgdGl0bGU6ICdFcnJvcicsDQogICAgICBtZXNzYWdlOiAnUGxlYXNlIGVudGVyIGEgc2VhcmNoIHRlcm0uJywNCiAgICAgIHBvc2l0aW9uOiAndG9wUmlnaHQnLA0KICAgIH0pOw0KICAgIHJldHVybjsNCiAgfQ0KDQogIGNsZWFyR2FsbGVyeSgpOw0KICBzaG93TG9hZGVyKCk7DQoNCiAgdHJ5IHsNCiAgICBjb25zdCBkYXRhID0gYXdhaXQgZ2V0SW1hZ2VzQnlRdWVyeShxdWVyeSk7DQoNCiAgICBoaWRlTG9hZGVyKCk7DQoNCiAgICBpZiAoZGF0YS5oaXRzLmxlbmd0aCA9PT0gMCkgew0KICAgICAgaXppVG9hc3QuaW5mbyh7DQogICAgICAgIHRpdGxlOiAnTm8gcmVzdWx0cycsDQogICAgICAgIG1lc3NhZ2U6DQogICAgICAgICAgJ1NvcnJ5LCB0aGVyZSBhcmUgbm8gaW1hZ2VzIG1hdGNoaW5nIHlvdXIgc2VhcmNoIHF1ZXJ5LiBQbGVhc2UgdHJ5IGFnYWluIScsDQogICAgICAgIHBvc2l0aW9uOiAndG9wUmlnaHQnLA0KICAgICAgfSk7DQogICAgICByZXR1cm47DQogICAgfQ0KDQogICAgY3JlYXRlR2FsbGVyeShkYXRhLmhpdHMpOw0KICAgIHNlYXJjaElucHV0LnZhbHVlID0gJyc7DQogIH0gY2F0Y2ggKGVycm9yKSB7DQogICAgaGlkZUxvYWRlcigpOw0KICAgIGl6aVRvYXN0LmVycm9yKHsNCiAgICAgIHRpdGxlOiAnRXJyb3InLA0KICAgICAgbWVzc2FnZTogJ0ZhaWxlZCB0byBmZXRjaCBpbWFnZXMuIFBsZWFzZSB0cnkgYWdhaW4gbGF0ZXIuJywNCiAgICAgIHBvc2l0aW9uOiAndG9wUmlnaHQnLA0KICAgIH0pOw0KICAgIGNvbnNvbGUuZXJyb3IoJ0Vycm9yOicsIGVycm9yKTsNCiAgfQ0KfQ0KDQo=" />
+    <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-BGjKfUOh.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-Dr4k8ETB.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-S5ba756R.css">
+  </head>
+  <body>
+    <header>
+      <form class="form">
+        <label>
+          <input
+            type="text"
+            name="search-text"
+            placeholder="Search images..."
+            required
+          />
+        </label>
+        <button type="submit">Search</button>
+      </form>
+    </header>
+
+    <main>
+      <div class="loader hidden">
+        <div class="spinner"></div>
+      </div>
+      <ul class="gallery"></ul>
+    </main>
+
+    <footer></footer>
+
+  </body>
+</html>
+
