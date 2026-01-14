@@ -1,5 +1,0 @@
-{
-  "root": true,
-  "env": true,
-  "extends": "prettier"
-}
